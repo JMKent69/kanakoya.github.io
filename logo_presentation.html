@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanakoya Presentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff6C9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 1.1em;
+        }
+        .medium-image {
+            width: 30%;
+            height: auto;
+        }
+        .small-image {
+            width: 25%;
+            height: auto;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .sns-icons img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <a onclick="showSlide(0)">Home</a>
+    <a onclick="showSlide(1)">About Us</a>
+    <a onclick="showSlide(2)">Our Mission</a>
+    <a onclick="showSlide(3)">Our Concept</a>
+    <a onclick="showSlide(4)">What We Offer</a>
+    <a onclick="showSlide(5)">Testimonials</a>
+    <a onclick="showSlide(6)">Contact</a>
+    <a onclick="showSlide(7)">Thank You</a>
+</div>
+
+<div class="slide" id="slide0">
+    <div class="title">Kanakoya - Empowering You to Create Your Own Life Balance</div>
+    <div class="subtitle">An Introduction to Our Macrobiotic Philosophy</div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo" class="medium-image">
+</div>
+
+<div class="slide" id="slide1">
+    <div class="title">About Kanakoya</div>
+    <div class="content">
+        Kanakoya is dedicated to promoting a balanced lifestyle through the principles of macrobiotic living. Our approach harmonizes body and mind, fostering health and wellness with natural, plant-based foods.
+    </div>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="images/meals/meal_1.jpg" alt="Balanced Meal 1" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_2.jpg" alt="Balanced Meal 2" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_3.jpg" alt="Balanced Meal 3" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_4.jpg" alt="Balanced Meal 4" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_5.jpg" alt="Balanced Meal 5" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_6.jpg" alt="Balanced Meal 6" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_7.jpg" alt="Balanced Meal 7" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_8.jpg" alt="Balanced Meal 8" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_9.jpg" alt="Balanced Meal 9" class="medium-image">
+        </div>
+    </div>
+</div>
+
+<div class="slide" id="slide2">
+    <div class="title">Our Mission</div>
+    <div class="content">
+        Empowering you to create your own life balance through the art of macrobiotic living. We believe in the power of natural, balanced nutrition to enhance your well-being.
+    </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo with Mission Statement" class="medium-image">
+</div>
+
+<div class="slide" id="slide3">
+    <div class="title">The Kanakoya Concept</div>
+    <div class="content">
+        <ul>
+            <li><strong>Yin and Yang:</strong> We incorporate the principles of yin and yang to achieve perfect harmony in our meals.</li>
+            <li><strong>Natural Ingredients:</strong> All our recipes use natural, plant-based ingredients sourced sustainably.</li>
+            <li><strong>Holistic Approach:</strong> Our philosophy extends beyond food to encompass all aspects of life, promoting overall well-being.</li>
+        </ul>
+    </div>
+    <img src="images/yin_yang_illustration.png" alt="Yin Yang Symbol" class="medium-image">
+</div>
+
+<div class="slide" id="slide4">
+    <div class="title">What We Offer</div>
+    <div class="content">
+        <ul>
+            <li><strong>Balanced Meals:</strong> Delicious, balanced meals delivered to your door.</li>
+            <li><strong>Workshops and Classes:</strong> Learn the art of macrobiotic cooking and living.</li>
+            <li><strong>Personal Consultations:</strong> Tailored advice to help you achieve your health goals.</li>
+        </ul>
+    </div>
+    <img src="images/meals_workshops_consultations.png" alt="Offerings" class="small-image">
+</div>
+
+<div class="slide" id="slide5">
+    <div class="title">What Our Clients Say</div>
+    <div class="content">
+        <blockquote>"Kanakoya's meals have transformed my life. I feel more balanced and healthier than ever!" - Happy Client</blockquote>
+        <blockquote>"The workshops are amazing! I've learned so much about macrobiotic living." - Satisfied Customer</blockquote>
+    </div>
+    <img src="images/happy_clients.png" alt="Happy Clients" class="small-image">
+</div>
+
+<div class="slide" id="slide6">
+    <div class="title">Get in Touch</div>
+    <div class="contact-info">
+        <p>We'd love to hear from you! Contact us for more information or to place an order.</p>
+        <p><strong>Email:</strong> info@kanakoya.com</p>
+        <p><strong>Website:</strong> www.kanakoya.com</p>
+        <p><strong>Phone:</strong> +81-123-456-789</p>
+    </div>
+    <div class="sns-icons">
+        <img src="images/twitter.png" alt="Twitter">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/youtube.png" alt="YouTube">
+    </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo" class="small-image">
+</div>
+
+<div class="slide" id="slide7">
+    <div class="title">Thank You</div>
+    <div class="content">
+        Thank you for considering Kanakoya. We look forward to helping you create your own life balance.
+    </div>
+    <img src="images/kanakoya_logo_slogan.png" alt="Kanakoya Logo" class="medium-image">
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.getElementsByClassName('slide');
+    function showSlide(index) {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = index;
+        slides[currentSlide].style.display = 'block';
+    }
+    // Initialize the first slide
+    showSlide(0);
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+</script>
+
+</body>
+</html>
