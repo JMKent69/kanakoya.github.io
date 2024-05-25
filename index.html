@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanakoya Presentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff6C9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 1.1em;
+        }
+        .medium-image {
+            width: 30%;
+            height: auto;
+        }
+        .small-image {
+            width: 25%;
+            height: auto;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 2s;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .sns-icons img {
+            width: 40px;
+            height: auto;
+            margin: 0 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.5em;
+            }
+            .subtitle {
+                font-size: 1.2em;
+            }
+            .content {
+                font-size: 1em;
+            }
+            .medium-image {
+                width: 80%;
+            }
+            .small-image {
+                width: 60%;
+            }
+            .menu {
+                padding: 5px;
+            }
+            .menu a {
+                margin: 0 5px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.2em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .content {
+                font-size: 0.9em;
+            }
+            .medium-image {
+                width: 100%;
+            }
+            .small-image {
+                width: 80%;
+            }
+            .menu {
+                padding: 5px;
+            }
+            .menu a {
+                margin: 0 2px;
+                font-size: 0.8em;
+            }
+        }
+
+        /* Language toggle */
+        .lang-en, .lang-ja {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <div class="lang-en">
+        <a onclick="showSlide(0)">Home</a>
+        <a onclick="showSlide(1)">About Us</a>
+        <a onclick="showSlide(2)">Our Mission</a>
+        <a onclick="showSlide(3)">Our Concept</a>
+        <a onclick="showSlide(4)">What We Offer</a>
+        <a onclick="showSlide(5)">Testimonials</a>
+        <a onclick="showSlide(6)">Contact</a>
+        <a onclick="showSlide(7)">Thank You</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a onclick="showSlide(0)">ホーム</a>
+        <a onclick="showSlide(1)">Kanakoyaについて</a>
+        <a onclick="showSlide(2)">私たちの使命</a>
+        <a onclick="showSlide(3)">Kanakoyaのコンセプト</a>
+        <a onclick="showSlide(4)">提供するもの</a>
+        <a onclick="showSlide(5)">お客様の声</a>
+        <a onclick="showSlide(6)">お問い合わせ</a>
+        <a onclick="showSlide(7)">ありがとう</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+</div>
+
+<div class="slide" id="slide0">
+    <div class="lang-en">
+        <div class="title">Kanakoya - Empowering You to Create Your Own Life Balance</div>
+        <div class="subtitle">An Introduction to Our Macrobiotic Philosophy</div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">Kanakoya - あなたの人生のバランスを作る力を</div>
+        <div class="subtitle">私たちの食養哲学の紹介</div>
+    </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo" class="medium-image">
+</div>
+
+<div class="slide" id="slide1">
+    <div class="lang-en">
+        <div class="title">About Kanakoya</div>
+        <div class="content">
+            Kanakoya is dedicated to promoting a balanced lifestyle through the principles of macrobiotic living. Our approach harmonizes body and mind, fostering health and wellness with natural, plant-based foods.
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">Kanakoyaについて</div>
+        <div class="content">
+            Kanakoyaは、食養生活の原則を通じてバランスの取れたライフスタイルを促進することに専念しています。私たちのアプローチは、自然で植物ベースの食品を使用して、体と心の調和を図り、健康とウェルネスを育みます。
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="images/meals/meal_1.jpg" alt="Balanced Meal 1" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_2.jpg" alt="Balanced Meal 2" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_3.jpg" alt="Balanced Meal 3" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_4.jpg" alt="Balanced Meal 4" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_5.jpg" alt="Balanced Meal 5" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_6.jpg" alt="Balanced Meal 6" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_7.jpg" alt="Balanced Meal 7" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_8.jpg" alt="Balanced Meal 8" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_9.jpg" alt="Balanced Meal 9" class="medium-image">
+        </div>
+    </div>
+</div>
+
+<div class="slide" id="slide2">
+    <div class="lang-en">
+        <div class="title">Our Mission</div>
+        <div class="content">
+            Empowering you to create your own life balance through the art of macrobiotic living. We believe in the power of natural, balanced nutrition to enhance your well-being.
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">私たちの使命</div>
+        <div class="content">
+            食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバ 食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバランスの取れた栄養があなたの健康を向上させる力を信じています。
+        </div>
+    </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo with Mission Statement" class="medium-image">
+</div>
+
+<div class="slide" id="slide3">
+    <div class="lang-en">
+        <div class="title">The Kanakoya Concept</div>
+        <div class="content">
+            <ul>
+                <li><strong>Yin and Yang:</strong> We incorporate the principles of yin and yang to achieve perfect harmony in our meals.</li>
+                <li><strong>Natural Ingredients:</strong> All our recipes use natural, plant-based ingredients sourced sustainably.</li>
+                <li><strong>Holistic Approach:</strong> Our philosophy extends beyond food to encompass all aspects of life, promoting overall well-being.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">Kanakoyaのコンセプト</div>
+        <div class="content">
+            <ul>
+                <li><strong>陰と陽:</strong> 私たちは、食事の中で完璧な調和を達成するために、陰と陽の原則を取り入れています。</li>
+                <li><strong>自然の成分:</strong> すべてのレシピは、持続可能な方法で調達された自然の植物ベースの成分を使用しています。</li>
+                <li><strong>ホリスティックアプローチ:</strong> 私たちの哲学は、食べ物を超えて生活のあらゆる側面を包含し、全体的な健康を促進します。</li>
+            </ul>
+        </div>
+    </div>
+    <img src="images/yin_yang_illustration.png" alt="Yin Yang Symbol" class="medium-image">
+</div>
+
+<div class="slide" id="slide4">
+    <div class="lang-en">
+        <div class="title">What We Offer</div>
+        <div class="content">
+            <ul>
+                <li><strong>Balanced Meals:</strong> Delicious, balanced meals delivered to your door.</li>
+                <li><strong>Workshops and Classes:</strong> Learn the art of macrobiotic cooking and living.</li>
+                <li><strong>Personal Consultations:</strong> Tailored advice to help you achieve your health goals.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">提供するもの</div>
+        <div class="content">
+            <ul>
+                <li><strong>バランスの取れた食事:</strong> 美味しくバランスの取れた食事をあなたの家に届けます。</li>
+                <li><strong>ワークショップとクラス:</strong> 食養料理と生活の芸術を学びます。</li>
+                <li><strong>個別相談:</strong> あなたの健康目標を達成するためのカスタマイズされたアドバイス。</li>
+            </ul>
+        </div>
+    </div>
+    <img src="images/meals_workshops_consultations.png" alt="Offerings" class="small-image">
+</div>
+
+<div class="slide" id="slide5">
+    <div class="lang-en">
+        <div class="title">What Our Clients Say</div>
+        <div class="content">
+            <blockquote>"Kanakoya's meals have transformed my life. I feel more balanced and healthier than ever!" - Happy Client</blockquote>
+            <blockquote>"The workshops are amazing! I've learned so much about macrobiotic living." - Satisfied Customer</blockquote>
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">お客様の声</div>
+        <div class="content">
+            <blockquote>"Kanakoyaの食事は私の人生を変えました。以前よりもバランスが取れて健康になったと感じています！" - 幸せなクライアント</blockquote>
+            <blockquote>"ワークショップは素晴らしいです！食養生活についてたくさん学びました。" - 満足したお客様</blockquote>
+        </div>
+    </div>
+    <img src="images/happy_clients.png" alt="Happy Clients" class="small-image">
+</div>
+
+<div class="slide" id="slide6">
+    <div class="lang-en">
+        <div class="title">Get in Touch</div>
+        <div class="contact-info">
+            <p>We'd love to hear from you! Contact us for more information or to place an order.</p>
+            <p><strong>Email:</strong> info@kanakoya.life</p>
+            <p><strong>Website:</strong> www.kanakoya.life</p>
+            <p><strong>Phone:</strong> +81-80-2391-8163</p>
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">お問い合わせ</div>
+        <div class="contact-info">
+            <p>ご連絡をお待ちしております！詳細情報やご注文については、お問い合わせください。</p>
+            <p><strong>メール:</strong> info@kanakoya.life</p>
+            <p><strong>ウェブサイト:</strong> www.kanakoya.life</p>
+            <p><strong>電話:</strong> +81-80-2391-8163</p>
+        </div>
+    </div>
+    <div class="sns-icons">
+        <img src="images/twitter.png" alt="Twitter">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/youtube.png" alt="YouTube">
+    </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo" class="small-image">
+</div>
+
+<div class="slide" id="slide7">
+    <div class="lang-en">
+        <div class="title">Thank You</div>
+        <div class="content">
+            Thank you for considering Kanakoya. We look forward to helping you create your own life balance.
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">ありがとう</div>
+        <div class="content">
+            Kanakoyaをご検討いただきありがとうございます。あなたの人生のバランスを作るお手伝いをさせていただけることを楽しみにしています。
+        </div>
+    </div>
+    <img src="images/kanakoya_logo_slogan.png" alt="Kanakoya Logo" class="medium-image">
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.getElementsByClassName('slide');
+    function showSlide(index) {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = index;
+        slides[currentSlide].style.display = 'block';
+    }
+    // Initialize the first slide
+    showSlide(0);
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function setLanguage(lang) {
+        const enElements = document.getElementsByClassName('lang-en');
+        const jaElements = document.getElementsByClassName('lang-ja');
+        
+        if (lang === 'en') {
+            for (let i = 0; i < enElements.length; i++) {
+                enElements[i].style.display = 'block';
+            }
+            for (let i = 0; i < jaElements.length; i++) {
+                jaElements[i].style.display = 'none';
+            }
+        } else if (lang === 'ja') {
+            for (let i = 0; i < enElements.length; i++) {
+                enElements[i].style.display = 'none';
+            }
+            for (let i = 0; i < jaElements.length; i++) {
+                jaElements[i].style.display = 'block';
+            }
+        }
+    }
+
+    // Initialize the page with English content
+    setLanguage('en');
+</script>
+
+</body>
+</html>
