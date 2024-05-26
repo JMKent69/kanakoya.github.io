@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kanakoya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu will be loaded here -->
+<div id="menu-placeholder"></div>
+
+<div class="lang-en">
+    <div class="title">Our Mission</div>
+    <div class="content">
+        Empowering you to create your own life balance through the art of macrobiotic living. We believe in the power of natural, balanced nutrition to enhance your well-being.
+    </div>
+</div>
+<div class="lang-ja">
+    <div class="title">私たちの使命</div>
+    <div class="content">
+        食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバ 食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバランスの取れた栄養があなたの健康を向上させる力を信じています。
+    </div>
+</div>
+<img src="images/kanakoya_logo.png" alt="Kanakoya Logo with Mission Statement" class="medium-image">
+
+<script src="scripts.js"></script>
+<script>
+    // Function to load the menu bar
+    function loadMenu() {
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+                setLanguage('en'); // Initialize the language
+            });
+    }
+
+    // Call the function to load the menu bar when the page loads
+    window.onload = function() {
+        loadMenu();
+    };
+</script>
+</body>
+</html>

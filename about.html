@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kanakoya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu will be loaded here -->
+<div id="menu-placeholder"></div>
+
+<div class="lang-en">
+    <div class="title">About Kanakoya</div>
+    <div class="content">
+        Kanakoya is dedicated to promoting a balanced lifestyle through the principles of macrobiotic living. Our approach harmonizes body and mind, fostering health and wellness with natural, plant-based foods.
+    </div>
+</div>
+<div class="lang-ja">
+    <div class="title">Kanakoyaについて</div>
+    <div class="content">
+        Kanakoyaは、食養生活の原則を通じてバランスの取れたライフスタイルを促進することに専念しています。私たちのアプローチは、自然で植物ベースの食品を使用して、体と心の調和を図り、健康とウェルネスを育みます。
+    </div>
+</div>
+<div class="slideshow-container">
+    <div class="slides fade">
+        <img src="images/meals/meal_1.jpg" alt="Balanced Meal 1" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_2.jpg" alt="Balanced Meal 2" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_3.jpg" alt="Balanced Meal 3" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_4.jpg" alt="Balanced Meal 4" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_5.jpg" alt="Balanced Meal 5" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_6.jpg" alt="Balanced Meal 6" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_7.jpg" alt="Balanced Meal 7" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_8.jpg" alt="Balanced Meal 8" class="medium-image">
+    </div>
+    <div class="slides fade">
+        <img src="images/meals/meal_9.jpg" alt="Balanced Meal 9" class="medium-image">
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+<script>
+    // Function to load the menu bar
+    function loadMenu() {
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+                setLanguage('en'); // Initialize the language
+            });
+    }
+
+    // Call the function to load the menu bar when the page loads
+    window.onload = function() {
+        loadMenu();
+    };
+</script>
+</body>
+</html>

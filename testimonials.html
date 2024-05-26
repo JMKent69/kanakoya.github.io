@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kanakoya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu will be loaded here -->
+<div id="menu-placeholder"></div>
+
+<div class="lang-en">
+    <div class="title">What Our Clients Say</div>
+    <div class="content">
+        <blockquote>"Kanakoya's meals have transformed my life. I feel more balanced and healthier than ever!" - Happy Client</blockquote>
+        <blockquote>"The workshops are amazing! I've learned so much about macrobiotic living." - Satisfied Customer</blockquote>
+    </div>
+</div>
+<div class="lang-ja">
+    <div class="title">お客様の声</div>
+    <div class="content">
+        <blockquote>"Kanakoyaの食事は私の人生を変えました。以前よりもバランスが取れて健康になったと感じています！" - 幸せなクライアント</blockquote>
+        <blockquote>"ワークショップは素晴らしいです！食養生活についてたくさん学びました。" - 満足したお客様</blockquote>
+    </div>
+</div>
+<img src="images/happy_clients.png" alt="Happy Clients" class="small-image">
+
+<script src="scripts.js"></script>
+<script>
+    // Function to load the menu bar
+    function loadMenu() {
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+                setLanguage('en'); // Initialize the language
+            });
+    }
+
+    // Call the function to load the menu bar when the page loads
+    window.onload = function() {
+        loadMenu();
+    };
+</script>
+</body>
+</html>

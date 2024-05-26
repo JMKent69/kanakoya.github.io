@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kanakoya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu will be loaded here -->
+<div id="menu-placeholder"></div>
+
+<div class="lang-en">
+    <div class="title">The Kanakoya Concept</div>
+    <div class="content">
+        <div class="center-div">
+            <ul>
+                <li><strong>Yin and Yang:</strong> We incorporate the principles of yin and yang to achieve perfect harmony in our meals.</li>
+                <li><strong>Natural Ingredients:</strong> All our recipes use natural, plant-based ingredients sourced sustainably.</li>
+                <li><strong>Holistic Approach:</strong> Our philosophy extends beyond food to encompass all aspects of life, promoting overall well-being.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="lang-ja">
+    <div class="title">Kanakoyaのコンセプト</div>
+    <div class="content">
+        <div class="center-div">
+            <ul>
+                <li><strong>陰と陽:</strong> 私たちは、食事の中で完璧な調和を達成するために、陰と陽の原則を取り入れています。</li>
+                <li><strong>自然の成分:</strong> すべてのレシピは、持続可能な方法で調達された自然の植物ベースの成分を使用しています。</li>
+                <li><strong>ホリスティックアプローチ:</strong> 私たちの哲学は、食べ物を超えて生活のあらゆる側面を包含し、全体的な健康を促進します。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<img src="images/yin_yang_illustration.png" alt="Yin Yang Symbol" class="small-image">
+
+<script src="scripts.js"></script>
+<script>
+    // Function to load the menu bar
+    function loadMenu() {
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+                setLanguage('en'); // Initialize the language
+            });
+    }
+
+    // Call the function to load the menu bar when the page loads
+    window.onload = function() {
+        loadMenu();
+    };
+</script>
+</body>
+</html>
