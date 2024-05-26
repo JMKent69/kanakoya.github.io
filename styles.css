@@ -1,0 +1,148 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff6C9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.menu a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.slide {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.content {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: 20px; /* Default left margin for all devices */
+    margin-right: 20px; /* Default right margin for all devices */
+}
+.contact-info {
+    font-size: 1.1em;
+}
+.center-div {
+    text-align: center;
+}
+.center-div ul {
+    display: inline-block;
+    text-align: left;
+}
+.medium-image {
+    width: 30%;
+    height: auto;
+}
+.small-image {
+    width: 25%;
+    height: auto;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slides {
+    display: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+.sns-icons img {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
+    .content {
+        font-size: 1em;
+        margin-left: 10px; /* Reduce margin for smaller screens */
+        margin-right: 10px; /* Reduce margin for smaller screens */
+    }
+    .medium-image {
+        width: 80%;
+    }
+    .small-image {
+        width: 60%;
+    }
+    .menu {
+        padding: 5px;
+    }
+    .menu a {
+        margin: 0 5px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+    .content {
+        font-size: 0.9em;
+        margin-left: 5px; /* Further reduce margin for very small screens */
+        margin-right: 5px; /* Further reduce margin for very small screens */
+    }
+    .medium-image {
+        width: 100%;
+    }
+    .small-image {
+        width: 80%;
+    }
+    .menu {
+        padding: 5px;
+    }
+    .menu a {
+        margin: 0 2px;
+        font-size: 0.8em;
+    }
+}
+
+/* Language toggle */
+.lang-en, .lang-ja {
+    display: none;
+}
