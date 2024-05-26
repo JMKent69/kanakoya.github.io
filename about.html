@@ -8,66 +8,84 @@
 </head>
 <body>
 
-<!-- Menu will be loaded here -->
-<div id="menu-placeholder"></div>
+<div class="menu">
+    <div class="lang-en">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="concept.html">Our Concept</a>
+        <a href="offer.html">What We Offer</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="thankyou.html">Thank You</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a href="index.html">ホーム</a>
+        <a href="about.html">カノコヤについて</a>
+        <a href="mission.html">私たちの使命</a>
+        <a href="concept.html">カノコヤのコンセプト</a>
+        <a href="offer.html">提供するもの</a>
+        <a href="testimonials.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="thankyou.html">ありがとう</a>
+        <a href="product_endorsement.html">製品推奨</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+</div>
 
-<div class="lang-en">
-    <div class="title">About Kanakoya</div>
-    <div class="content">
-        Kanakoya is dedicated to promoting a balanced lifestyle through the principles of macrobiotic living. Our approach harmonizes body and mind, fostering health and wellness with natural, plant-based foods.
+<div class="content">
+    <div class="lang-en">
+        <div class="title">About Kanakoya</div>
+        <div class="content">
+            Kanakoya is dedicated to promoting a balanced lifestyle through the principles of macrobiotic living. Our approach harmonizes body and mind, fostering health and wellness with natural, plant-based foods.
+        </div>
     </div>
-</div>
-<div class="lang-ja">
-    <div class="title">Kanakoyaについて</div>
-    <div class="content">
-        Kanakoyaは、食養生活の原則を通じてバランスの取れたライフスタイルを促進することに専念しています。私たちのアプローチは、自然で植物ベースの食品を使用して、体と心の調和を図り、健康とウェルネスを育みます。
+    <div class="lang-ja">
+        <div class="title">Kanakoyaについて</div>
+        <div class="content">
+            Kanakoyaは、食養生活の原則を通じてバランスの取れたライフスタイルを促進することに専念しています。私たちのアプローチは、自然で植物ベースの食品を使用して、体と心の調和を図り、健康とウェルネスを育みます。
+        </div>
     </div>
-</div>
-<div class="slideshow-container">
-    <div class="slides fade">
-        <img src="images/meals/meal_1.jpg" alt="Balanced Meal 1" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_2.jpg" alt="Balanced Meal 2" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_3.jpg" alt="Balanced Meal 3" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_4.jpg" alt="Balanced Meal 4" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_5.jpg" alt="Balanced Meal 5" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_6.jpg" alt="Balanced Meal 6" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_7.jpg" alt="Balanced Meal 7" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_8.jpg" alt="Balanced Meal 8" class="medium-image">
-    </div>
-    <div class="slides fade">
-        <img src="images/meals/meal_9.jpg" alt="Balanced Meal 9" class="medium-image">
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="images/meals/meal_1.jpg" alt="Balanced Meal 1" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_2.jpg" alt="Balanced Meal 2" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_3.jpg" alt="Balanced Meal 3" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_4.jpg" alt="Balanced Meal 4" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_5.jpg" alt="Balanced Meal 5" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_6.jpg" alt="Balanced Meal 6" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_7.jpg" alt="Balanced Meal 7" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_8.jpg" alt="Balanced Meal 8" class="medium-image">
+        </div>
+        <div class="slides fade">
+            <img src="images/meals/meal_9.jpg" alt="Balanced Meal 9" class="medium-image">
+        </div>
     </div>
 </div>
 
 <script src="scripts.js"></script>
 <script>
-    // Function to load the menu bar
-    function loadMenu() {
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-                setLanguage('en'); // Initialize the language
-            });
-    }
-
-    // Call the function to load the menu bar when the page loads
     window.onload = function() {
-        loadMenu();
+        setLanguage('en');
+        showSlides(); // Ensure this function is called to start the slideshow
     };
 </script>
 </body>

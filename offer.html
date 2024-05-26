@@ -8,49 +8,66 @@
 </head>
 <body>
 
-<!-- Menu will be loaded here -->
-<div id="menu-placeholder"></div>
+<div class="menu">
+    <div class="lang-en">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="concept.html">Our Concept</a>
+        <a href="offer.html">What We Offer</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="thankyou.html">Thank You</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a href="index.html">ホーム</a>
+        <a href="about.html">カノコヤについて</a>
+        <a href="mission.html">私たちの使命</a>
+        <a href="concept.html">カノコヤのコンセプト</a>
+        <a href="offer.html">提供するもの</a>
+        <a href="testimonials.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="thankyou.html">ありがとう</a>
+        <a href="product_endorsement.html">製品推奨</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+</div>
 
-<div class="lang-en">
-    <div class="title">What We Offer</div>
-    <div class="content">
-        <div class="center-div">
-            <ul>
-                <li><strong>Balanced Meals:</strong> Delicious, balanced meals delivered to your door.</li>
-                <li><strong>Workshops and Classes:</strong> Learn the art of macrobiotic cooking and living.</li>
-                <li><strong>Personal Consultations:</strong> Tailored advice to help you achieve your health goals.</li>
-            </ul>
+<div class="content">
+    <div class="lang-en">
+        <div class="title">What We Offer</div>
+        <div class="content">
+            <div class="center-div">
+                <ul>
+                    <li><strong>Balanced Meals:</strong> Delicious, balanced meals delivered to your door.</li>
+                    <li><strong>Workshops and Classes:</strong> Learn the art of macrobiotic cooking and living.</li>
+                    <li><strong>Personal Consultations:</strong> Tailored advice to help you achieve your health goals.</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<div class="lang-ja">
-    <div class="title">提供するもの</div>
-    <div class="content">
-        <div class="center-div">
-            <ul>
-                <li><strong>バランスの取れた食事:</strong> 美味しくバランスの取れた食事をあなたの家に届けます。</li>
-                <li><strong>ワークショップとクラス:</strong> 食養料理と生活の芸術を学びます。</li>
-                <li><strong>個別相談:</strong> あなたの健康目標を達成するためのカスタマイズされたアドバイス。</li>
-            </ul>
+    <div class="lang-ja">
+        <div class="title">提供するもの</div>
+        <div class="content">
+            <div class="center-div">
+                <ul>
+                    <li><strong>バランスの取れた食事:</strong> 美味しくバランスの取れた食事をあなたの家に届けます。</li>
+                    <li><strong>ワークショップとクラス:</strong> 食養料理と生活の芸術を学びます。</li>
+                    <li><strong>個別相談:</strong> あなたの健康目標を達成するためのカスタマイズされたアドバイス。</li>
+                </ul>
+            </div>
         </div>
     </div>
+    <img src="images/meals_workshops_consultations.png" alt="Offerings" class="small-image">
 </div>
-<img src="images/meals_workshops_consultations.png" alt="Offerings" class="small-image">
 <script src="scripts.js"></script>
 <script>
-    // Function to load the menu bar
-    function loadMenu() {
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-                setLanguage('en'); // Initialize the language
-            });
-    }
-
-    // Call the function to load the menu bar when the page loads
     window.onload = function() {
-        loadMenu();
+        setLanguage('en');
     };
 </script>
 </body>

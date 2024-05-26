@@ -8,40 +8,56 @@
 </head>
 <body>
 
-<!-- Menu will be loaded here -->
-<div id="menu-placeholder"></div>
-
-<div class="lang-en">
-    <div class="title">What Our Clients Say</div>
-    <div class="content">
-        <blockquote>"Kanakoya's meals have transformed my life. I feel more balanced and healthier than ever!" - Happy Client</blockquote>
-        <blockquote>"The workshops are amazing! I've learned so much about macrobiotic living." - Satisfied Customer</blockquote>
+<div class="menu">
+    <div class="lang-en">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="concept.html">Our Concept</a>
+        <a href="offer.html">What We Offer</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="thankyou.html">Thank You</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a href="index.html">ホーム</a>
+        <a href="about.html">カノコヤについて</a>
+        <a href="mission.html">私たちの使命</a>
+        <a href="concept.html">カノコヤのコンセプト</a>
+        <a href="offer.html">提供するもの</a>
+        <a href="testimonials.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="thankyou.html">ありがとう</a>
+        <a href="product_endorsement.html">製品推奨</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
     </div>
 </div>
-<div class="lang-ja">
-    <div class="title">お客様の声</div>
-    <div class="content">
-        <blockquote>"Kanakoyaの食事は私の人生を変えました。以前よりもバランスが取れて健康になったと感じています！" - 幸せなクライアント</blockquote>
-        <blockquote>"ワークショップは素晴らしいです！食養生活についてたくさん学びました。" - 満足したお客様</blockquote>
-    </div>
-</div>
-<img src="images/happy_clients.png" alt="Happy Clients" class="small-image">
 
+<div class="content">
+    <div class="lang-en">
+        <div class="title">What Our Clients Say</div>
+        <div class="content">
+            <blockquote>"Kanakoya's meals have transformed my life. I feel more balanced and healthier than ever!" - Happy Client</blockquote>
+            <blockquote>"The workshops are amazing! I've learned so much about macrobiotic living." - Satisfied Customer</blockquote>
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">お客様の声</div>
+        <div class="content">
+            <blockquote>"Kanakoyaの食事は私の人生を変えました。以前よりもバランスが取れて健康になったと感じています！" - 幸せなクライアント</blockquote>
+            <blockquote>"ワークショップは素晴らしいです！食養生活についてたくさん学びました。" - 満足したお客様</blockquote>
+        </div>
+    </div>
+    <img src="images/happy_clients.png" alt="Happy Clients" class="small-image">
+</div>
 <script src="scripts.js"></script>
 <script>
-    // Function to load the menu bar
-    function loadMenu() {
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-                setLanguage('en'); // Initialize the language
-            });
-    }
-
-    // Call the function to load the menu bar when the page loads
     window.onload = function() {
-        loadMenu();
+        setLanguage('en');
     };
 </script>
 </body>

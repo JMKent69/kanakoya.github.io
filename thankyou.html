@@ -8,38 +8,54 @@
 </head>
 <body>
 
-<!-- Menu will be loaded here -->
-<div id="menu-placeholder"></div>
-
-<div class="lang-en">
-    <div class="title">Thank You</div>
-    <div class="content">
-        Thank you for considering Kanakoya. We look forward to helping you create your own life balance.
+<div class="menu">
+    <div class="lang-en">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="concept.html">Our Concept</a>
+        <a href="offer.html">What We Offer</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="thankyou.html">Thank You</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a href="index.html">ホーム</a>
+        <a href="about.html">カノコヤについて</a>
+        <a href="mission.html">私たちの使命</a>
+        <a href="concept.html">カノコヤのコンセプト</a>
+        <a href="offer.html">提供するもの</a>
+        <a href="testimonials.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="thankyou.html">ありがとう</a>
+        <a href="product_endorsement.html">製品推奨</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
     </div>
 </div>
-<div class="lang-ja">
-    <div class="title">ありがとう</div>
-    <div class="content">
-        Kanakoyaをご検討いただきありがとうございます。あなたの人生のバランスを作るお手伝いをさせていただけることを楽しみにしています。
-    </div>
-</div>
-<img src="images/kanakoya_logo_slogan.png" alt="Kanakoya Logo" class="medium-image">
 
+<div class="content">
+    <div class="lang-en">
+        <div class="title">Thank You</div>
+        <div class="content">
+            Thank you for considering Kanakoya. We look forward to helping you create your own life balance.
+        </div>
+    </div>
+    <div class="lang-ja">
+        <div class="title">ありがとう</div>
+        <div class="content">
+            Kanakoyaをご検討いただきありがとうございます。あなたの人生のバランスを作るお手伝いをさせていただけることを楽しみにしています。
+        </div>
+    </div>
+    <img src="images/kanakoya_logo_slogan.png" alt="Kanakoya Logo" class="medium-image">
+</div>
 <script src="scripts.js"></script>
 <script>
-    // Function to load the menu bar
-    function loadMenu() {
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-                setLanguage('en'); // Initialize the language
-            });
-    }
-
-    // Call the function to load the menu bar when the page loads
     window.onload = function() {
-        loadMenu();
+        setLanguage('en');
     };
 </script>
 </body>

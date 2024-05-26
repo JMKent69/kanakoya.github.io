@@ -8,38 +8,55 @@
 </head>
 <body>
 
-<!-- Menu will be loaded here -->
-<div id="menu-placeholder"></div>
+<div class="menu">
+    <div class="lang-en">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="concept.html">Our Concept</a>
+        <a href="offer.html">What We Offer</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact</a>
+        <a href="thankyou.html">Thank You</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+    <div class="lang-ja">
+        <a href="index.html">ホーム</a>
+        <a href="about.html">カノコヤについて</a>
+        <a href="mission.html">私たちの使命</a>
+        <a href="concept.html">カノコヤのコンセプト</a>
+        <a href="offer.html">提供するもの</a>
+        <a href="testimonials.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="thankyou.html">ありがとう</a>
+        <a href="product_endorsement.html">製品推奨</a>
+        <a onclick="setLanguage('en')">English</a>
+        <a onclick="setLanguage('ja')">日本語</a>
+    </div>
+</div>
 
-<div class="lang-en">
-    <div class="title">Our Mission</div>
-    <div class="content">
-        Empowering you to create your own life balance through the art of macrobiotic living. We believe in the power of natural, balanced nutrition to enhance your well-being.
+<div class="content">
+    <div class="lang-en">
+        <div class="title">Our Mission</div>
+        <div class="content">
+            Empowering you to create your own life balance through the art of macrobiotic living. We believe in the power of natural, balanced nutrition to enhance your well-being.
+        </div>
     </div>
-</div>
-<div class="lang-ja">
-    <div class="title">私たちの使命</div>
-    <div class="content">
-        食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバ 食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバランスの取れた栄養があなたの健康を向上させる力を信じています。
+    <div class="lang-ja">
+        <div class="title">私たちの使命</div>
+        <div class="content">
+            食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバ 食養生活の芸術を通じて、あなた自身の人生のバランスを作る力を与えること。私たちは、自然でバランスの取れた栄養があなたの健康を向上させる力を信じています。
+        </div>
     </div>
+    <img src="images/kanakoya_logo.png" alt="Kanakoya Logo with Mission Statement" class="medium-image">
 </div>
-<img src="images/kanakoya_logo.png" alt="Kanakoya Logo with Mission Statement" class="medium-image">
 
 <script src="scripts.js"></script>
 <script>
-    // Function to load the menu bar
-    function loadMenu() {
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-                setLanguage('en'); // Initialize the language
-            });
-    }
-
-    // Call the function to load the menu bar when the page loads
     window.onload = function() {
-        loadMenu();
+        setLanguage('en');
     };
 </script>
 </body>
