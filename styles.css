@@ -17,9 +17,13 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-.content {
+.slide, .content {
     padding: 20px;
     text-align: center;
+}
+.slide img, .content img {
+    max-width: 100%;
+    height: auto;
 }
 .title {
     font-size: 2em;
@@ -29,33 +33,63 @@ body {
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+.content {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.contact-info {
+    font-size: 1.1em;
+}
 .center-div {
     text-align: center;
 }
-
 .center-div ul {
     display: inline-block;
     text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+.center-div ul li {
+    padding: 5px 0;
 }
 .medium-image {
     width: 30%;
-    height: 30%;
+    max-width: 600px;
+    height: auto;
 }
 .small-image {
     width: 20%;
-    height: 20%;
+    max-width: 300px;
+    height: auto;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+.slides {
+    display: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 .sns-icons img {
     width: 40px;
     height: auto;
     margin: 0 10px;
 }
-.lang-en, .lang-ja {
-    display: none;
-}
-.lang-en {
-    display: block;
-}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .title {
@@ -67,7 +101,21 @@ body {
     .content {
         font-size: 1em;
     }
+    .medium-image {
+        width: 90%;
+    }
+    .small-image {
+        width: 70%;
+    }
+    .menu {
+        padding: 5px;
+    }
+    .menu a {
+        margin: 0 5px;
+        font-size: 0.9em;
+    }
 }
+
 @media (max-width: 480px) {
     .title {
         font-size: 1.2em;
@@ -78,4 +126,22 @@ body {
     .content {
         font-size: 0.9em;
     }
+    .medium-image {
+        width: 100%;
+    }
+    .small-image {
+        width: 80%;
+    }
+    .menu {
+        padding: 5px;
+    }
+    .menu a {
+        margin: 0 2px;
+        font-size: 0.8em;
+    }
+}
+
+/* Language toggle */
+.lang-en, .lang-ja {
+    display: none;
 }
