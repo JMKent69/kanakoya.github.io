@@ -17,6 +17,7 @@ function toggleLanguage(language) {
             elementsJa[i].style.display = 'block';
         }
     }
+    localStorage.setItem('language', language); // Store the selected language
 }
 
 function setLanguage(lang) {
@@ -38,6 +39,7 @@ function setLanguage(lang) {
             jaElements[i].style.display = 'block';
         }
     }
+    localStorage.setItem('language', lang); // Store the selected language
 }
 
 let slideIndex = 0;
@@ -57,6 +59,7 @@ function showSlides() {
 
 // Initialize the page
 window.onload = function() {
-    setLanguage('en');
+    const storedLanguage = localStorage.getItem('language') || 'en'; // Retrieve the stored language or default to 'en'
+    setLanguage(storedLanguage);
     showSlides();
 };

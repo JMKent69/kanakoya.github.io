@@ -16,11 +16,11 @@
         <a href="concept.html">Our Concept</a>
         <a href="offer.html">What We Offer</a>
         <a href="testimonials.html">Testimonials</a>
+        <a href="product_endorsement.html">Product Endorsement</a>
         <a href="contact.html">Contact</a>
         <a href="thankyou.html">Thank You</a>
-        <a href="product_endorsement.html">Product Endorsement</a>
-        <a onclick="setLanguage('en')">English</a>
-        <a onclick="setLanguage('ja')">日本語</a>
+        <a onclick="toggleLanguage('en')">English</a>
+        <a onclick="toggleLanguage('ja')">日本語</a>
     </div>
     <div class="lang-ja">
         <a href="index.html">ホーム</a>
@@ -29,11 +29,11 @@
         <a href="concept.html">カノコヤのコンセプト</a>
         <a href="offer.html">提供するもの</a>
         <a href="testimonials.html">お客様の声</a>
+        <a href="product_endorsement.html">製品推奨</a>
         <a href="contact.html">お問い合わせ</a>
         <a href="thankyou.html">ありがとう</a>
-        <a href="product_endorsement.html">製品推奨</a>
-        <a onclick="setLanguage('en')">English</a>
-        <a onclick="setLanguage('ja')">日本語</a>
+        <a onclick="toggleLanguage('en')">English</a>
+        <a onclick="toggleLanguage('ja')">日本語</a>
     </div>
 </div>
 
@@ -82,11 +82,6 @@
 </div>
 
 <script src="scripts.js"></script>
-<script>
-    window.onload = function() {
-        setLanguage('en');
-        showSlides(); // Ensure this function is called to start the slideshow
-    };
-</script>
+
 </body>
 </html>
