@@ -1,8 +1,8 @@
 let currentSlide = 0;
 let slideIndex = 0;
-const slides = document.getElementsByClassName('slide');
 
 function showSlide(index) {
+    const slides = document.getElementsByClassName('slide');
     if (slides.length > 0) {
         slides[currentSlide].style.display = 'none';
         currentSlide = index;
@@ -11,7 +11,7 @@ function showSlide(index) {
 }
 
 function showSlides() {
-    let slides = document.getElementsByClassName("slides");
+    const slides = document.getElementsByClassName("slides");
     if (slides.length > 0) {
         let i;
         for (i = 0; i < slides.length; i++) {
@@ -78,7 +78,7 @@ function loadMenu() {
         });
 }
 
-// Initialize the page with English content
+// Initialize the page
 window.onload = function() {
     loadMenu();
     setLanguage('en');
